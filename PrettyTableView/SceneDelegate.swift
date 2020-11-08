@@ -14,9 +14,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        /*
+         ** TableView1
+         */
+        
+//        window = UIWindow(windowScene: windowScene)
+//        window?.makeKeyAndVisible()
+//        window?.rootViewController = UINavigationController(rootViewController: TableViewController())
+        
+        /*
+         ** TableView2
+         */
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: TableViewController())
+        window?.rootViewController = UINavigationController(rootViewController: YourAccountTableViewController())
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

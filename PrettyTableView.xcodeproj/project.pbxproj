@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A16B9C2225573EED00D887F1 /* YourAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */; };
+		A16B9C2725574A1100D887F1 /* SocialAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2625574A1100D887F1 /* SocialAccountModel.swift */; };
+		A16B9C2C25574B6100D887F1 /* SocialAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */; };
 		A19ACDB62555D789009C04AF /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19ACDB52555D789009C04AF /* ImageController.swift */; };
 		A1A88E8D2554FCBE0003AB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A88E8C2554FCBE0003AB46 /* AppDelegate.swift */; };
 		A1A88E8F2554FCBE0003AB46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A88E8E2554FCBE0003AB46 /* SceneDelegate.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountTableViewController.swift; sourceTree = "<group>"; };
+		A16B9C2625574A1100D887F1 /* SocialAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAccountModel.swift; sourceTree = "<group>"; };
+		A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAccountCell.swift; sourceTree = "<group>"; };
 		A19ACDB52555D789009C04AF /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		A1A88E892554FCBE0003AB46 /* PrettyTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A88E8C2554FCBE0003AB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16B9C2025573E0900D887F1 /* TableView2 */ = {
+			isa = PBXGroup;
+			children = (
+				A16B9C2925574A2100D887F1 /* Models */,
+				A16B9C25255749F100D887F1 /* Controllers */,
+				A16B9C2E25574BBE00D887F1 /* Views */,
+			);
+			path = TableView2;
+			sourceTree = "<group>";
+		};
+		A16B9C25255749F100D887F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A16B9C2925574A2100D887F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A16B9C2625574A1100D887F1 /* SocialAccountModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A16B9C2E25574BBE00D887F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A19ACDBD25560AF9009C04AF /* TableView1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +115,7 @@
 				A1A88E8C2554FCBE0003AB46 /* AppDelegate.swift */,
 				A1A88E8E2554FCBE0003AB46 /* SceneDelegate.swift */,
 				A19ACDBD25560AF9009C04AF /* TableView1 */,
+				A16B9C2025573E0900D887F1 /* TableView2 */,
 				A1A88E922554FCBE0003AB46 /* Main.storyboard */,
 				A1A88E952554FCC00003AB46 /* Assets.xcassets */,
 				A1A88E972554FCC00003AB46 /* LaunchScreen.storyboard */,
@@ -180,7 +221,10 @@
 			files = (
 				A1A88EAA25550BA80003AB46 /* CardCell.swift in Sources */,
 				A1A88E912554FCBE0003AB46 /* TableViewController.swift in Sources */,
+				A16B9C2225573EED00D887F1 /* YourAccountTableViewController.swift in Sources */,
 				A1A88E8D2554FCBE0003AB46 /* AppDelegate.swift in Sources */,
+				A16B9C2725574A1100D887F1 /* SocialAccountModel.swift in Sources */,
+				A16B9C2C25574B6100D887F1 /* SocialAccountCell.swift in Sources */,
 				A1A88E8F2554FCBE0003AB46 /* SceneDelegate.swift in Sources */,
 				A1A88EA32555022B0003AB46 /* SectionData.swift in Sources */,
 				A19ACDB62555D789009C04AF /* ImageController.swift in Sources */,
