@@ -1,5 +1,5 @@
 //
-//  SocialViewController.swift
+//  YourAccountsTableViewController.swift
 //  PrettyTableView
 //
 //  Created by Boris Goncharov on 11/7/20.
@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class YourAccountTableViewController: UITableViewController {
+class YourAccountsTableViewController: UITableViewController {
     
     fileprivate let CELL_ID = "CELL_ID"
-    
+        
     var socialAccounts: [[SocialAccount]] = [
         [SocialAccount(title: "Twitter", url: "https://twitter.com/bgoncharov", imageUrl: "twitter"),
          SocialAccount(title: "Facebook", url: "https://facebook.com/bgoncharovs", imageUrl: "facebook"),
@@ -19,9 +19,7 @@ class YourAccountTableViewController: UITableViewController {
         ],
         [
             SocialAccount(title: "Twitter", url: "https://twitter.com/bgoncharov", imageUrl: "twitter"),
-            SocialAccount(title: "Facebook", url: "https://facebook.com/bgoncharovs", imageUrl: "facebook"),
-            SocialAccount(title: "Instagram", url: "https://instagram.com/bgoncharov", imageUrl: "instagram"),
-            SocialAccount(title: "Instagram", url: "https://instagram.com/bgoncharov", imageUrl: "instagram")
+
         ]
         
     ]
@@ -34,7 +32,7 @@ class YourAccountTableViewController: UITableViewController {
         setupTableView()
         setupBarButtonItems()
     }
-    
+
     fileprivate func setupBarButtonItems() {
         let item: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewSocialAccaunt))
         
@@ -42,7 +40,12 @@ class YourAccountTableViewController: UITableViewController {
     }
     
     @objc fileprivate func addNewSocialAccaunt() {
-        print("yo")
+        let newAccountSocialController = NewSocialAccountViewController()
+        newAccountSocialController.delegate = self
+        let newAccountNavigationViewController = UINavigationController(rootViewController: newAccountSocialController)
+        
+        newAccountNavigationViewController.modalPresentationStyle = .fullScreen
+        present(newAccountNavigationViewController, animated: true, completion: nil)
     }
     
     private func setupTableView() {
@@ -108,4 +111,17 @@ class YourAccountTableViewController: UITableViewController {
         let actions = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
         return actions
     }
+}
+
+extension YourAccountsTableViewController: NewSocialAccountDelegate {
+    func newSocialAccount(title: String, url: String) {
+        let newAccount = SocialAccount(title: title, url: url, imageUrl: "facebook")
+        let section = 1
+//        let row = self.socialAccounts[section].count
+//        let insertionIndexPath = IndexPath(row: row, section: section)
+        self.socialAccounts[section].append(newAccount)
+//        tableView.insertRows(at: [insertionIndexPath], with: .automatic)
+        tableView.reloadData()
+    }
+
 }

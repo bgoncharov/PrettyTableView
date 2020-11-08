@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A16B9C2225573EED00D887F1 /* YourAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */; };
+		A168A0842558825C0036A72E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168A0832558825B0036A72E /* CustomTextField.swift */; };
+		A168A08825588D0D0036A72E /* NewSocialAccountDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A168A08725588D0D0036A72E /* NewSocialAccountDelegate.swift */; };
+		A16B9C2225573EED00D887F1 /* YourAccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2125573EED00D887F1 /* YourAccountsTableViewController.swift */; };
 		A16B9C2725574A1100D887F1 /* SocialAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2625574A1100D887F1 /* SocialAccountModel.swift */; };
 		A16B9C2C25574B6100D887F1 /* SocialAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */; };
+		A16B9C3325579FBF00D887F1 /* NewSocialAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B9C3225579FBF00D887F1 /* NewSocialAccountViewController.swift */; };
 		A19ACDB62555D789009C04AF /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19ACDB52555D789009C04AF /* ImageController.swift */; };
 		A1A88E8D2554FCBE0003AB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A88E8C2554FCBE0003AB46 /* AppDelegate.swift */; };
 		A1A88E8F2554FCBE0003AB46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A88E8E2554FCBE0003AB46 /* SceneDelegate.swift */; };
@@ -22,9 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountTableViewController.swift; sourceTree = "<group>"; };
+		A168A0832558825B0036A72E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A168A08725588D0D0036A72E /* NewSocialAccountDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialAccountDelegate.swift; sourceTree = "<group>"; };
+		A16B9C2125573EED00D887F1 /* YourAccountsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAccountsTableViewController.swift; sourceTree = "<group>"; };
 		A16B9C2625574A1100D887F1 /* SocialAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAccountModel.swift; sourceTree = "<group>"; };
 		A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAccountCell.swift; sourceTree = "<group>"; };
+		A16B9C3225579FBF00D887F1 /* NewSocialAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialAccountViewController.swift; sourceTree = "<group>"; };
 		A19ACDB52555D789009C04AF /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		A1A88E892554FCBE0003AB46 /* PrettyTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A88E8C2554FCBE0003AB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,9 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A168A08625588CFC0036A72E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A168A08725588D0D0036A72E /* NewSocialAccountDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A16B9C2025573E0900D887F1 /* TableView2 */ = {
 			isa = PBXGroup;
 			children = (
+				A168A08625588CFC0036A72E /* Protocols */,
 				A16B9C2925574A2100D887F1 /* Models */,
 				A16B9C25255749F100D887F1 /* Controllers */,
 				A16B9C2E25574BBE00D887F1 /* Views */,
@@ -62,7 +77,8 @@
 		A16B9C25255749F100D887F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A16B9C2125573EED00D887F1 /* YourAccountTableViewController.swift */,
+				A16B9C2125573EED00D887F1 /* YourAccountsTableViewController.swift */,
+				A16B9C3225579FBF00D887F1 /* NewSocialAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				A16B9C2B25574B6100D887F1 /* SocialAccountCell.swift */,
+				A168A0832558825B0036A72E /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,13 +237,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A88EAA25550BA80003AB46 /* CardCell.swift in Sources */,
+				A168A0842558825C0036A72E /* CustomTextField.swift in Sources */,
 				A1A88E912554FCBE0003AB46 /* TableViewController.swift in Sources */,
-				A16B9C2225573EED00D887F1 /* YourAccountTableViewController.swift in Sources */,
+				A16B9C2225573EED00D887F1 /* YourAccountsTableViewController.swift in Sources */,
 				A1A88E8D2554FCBE0003AB46 /* AppDelegate.swift in Sources */,
 				A16B9C2725574A1100D887F1 /* SocialAccountModel.swift in Sources */,
+				A168A08825588D0D0036A72E /* NewSocialAccountDelegate.swift in Sources */,
 				A16B9C2C25574B6100D887F1 /* SocialAccountCell.swift in Sources */,
 				A1A88E8F2554FCBE0003AB46 /* SceneDelegate.swift in Sources */,
 				A1A88EA32555022B0003AB46 /* SectionData.swift in Sources */,
+				A16B9C3325579FBF00D887F1 /* NewSocialAccountViewController.swift in Sources */,
 				A19ACDB62555D789009C04AF /* ImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

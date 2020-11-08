@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          */
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: YourAccountTableViewController())
+        window?.rootViewController = UINavigationController(rootViewController: YourAccountsTableViewController())
         
     }
 
